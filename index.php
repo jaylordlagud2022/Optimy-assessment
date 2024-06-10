@@ -15,19 +15,20 @@ foreach (NewsManager::getInstance()->listNews() as $news) {
     }
 }
 
-// Test deletion of a news item
-$newsIdToDelete = 1; // Specify the news ID to delete (change this to a valid news ID)
-$success = NewsManager::getInstance()->deleteNews($newsIdToDelete);
-if ($success) {
-    echo "News item with ID $newsIdToDelete deleted successfully.\n";
-} else {
-    echo "Failed to delete news item with ID $newsIdToDelete.\n";
-}
+// // Test deletion of a news item
+// $newsIdToDelete = 1; // Specify the news ID to delete (change this to a valid news ID)
+// $success = NewsManager::getInstance()->deleteNews($newsIdToDelete);
+// if ($success) {
+//     echo "News item with ID $newsIdToDelete deleted successfully.\n";
+// } else {
+//     echo "Failed to delete news item with ID $newsIdToDelete.\n";
+// }
 
-// List comments after deletion
-echo "Comments after deletion:\n";
-$commentManager = CommentManager::getInstance();
-$comments = $commentManager->listComments();
-foreach ($comments as $comment) {
-    echo("Comment " . $comment->getId() . " : " . $comment->getBody() . "\n");
-}
+
+
+// // Test add comments of a news item
+// $newsIdToaddComment = 2; // Specify the news ID to delete (change this to a valid news ID)
+// $success = CommentManager::getInstance()->addCommentForNews('hello this is test', $newsIdToaddComment);
+// if ($success) {
+//     echo "News item with ID $newsIdToaddComment added comment successfully.\n";
+// }
